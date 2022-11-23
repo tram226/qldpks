@@ -41,12 +41,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <!-- danh dách phòng --> 
+                                        <!-- danh dách dịch vụ --> 
                                         <?php  if(isset($data["alldichvu"])){
-                                            $alldichvu  = json_decode($data["alldichvu"],true);
+                                            $list_dichvu  = json_decode($data["alldichvu"],true);
                                             $number = 1;
-                                            if(!empty($alldichvu)){
-                                                foreach($alldichvu  as $row_r){
+                                            if(!empty($list_dichvu )){
+                                                foreach($list_dichvu  as $row_r){
                                                    
                                                     echo '<tr class="odd gradeX">
                                                     <td class="center">'.$number.'</td>
@@ -71,7 +71,7 @@
                                             }
                                         }                                        
                                         ?>
-                                            <!--end danh dách phòng --> 
+                                            <!--end danh dách dịch vụ --> 
 									
 										</tbody>
                                     </table>

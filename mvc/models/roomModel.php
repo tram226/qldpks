@@ -21,7 +21,7 @@ class roomModel extends connectDB{
 
     // get danh sach cac phong 
     function getAllRoom(){
-        $sql = "SELECT DISTINCT phong.ma_phong, phong.ten_phong, phong.noi_dung , phong.gia_phong, hinh_anh.image_anh, phong.so_phong
+        $sql = "SELECT DISTINCT phong.ma_phong, phong.ten_phong, phong.noi_dung , phong.gia_phong, hinh_anh.image_anh
         FROM phong INNER JOIN hinh_anh  WHERE phong.ma_hinh_anh = hinh_anh.ma_hinh_anh GROUP BY phong.ma_phong";
         $result = $this->connect->query($sql);
         $info  = array();
