@@ -1,0 +1,205 @@
+@import '../abstracts/mixin';
+@import '../abstracts/variable';
+
+.wrapPageRoomList {
+    padding: 30px 0 60px 0;
+    background-color: $color1;
+}
+
+.itemRoomList {
+    padding: 30px;
+    background-color: $color1;
+    @include boxShadow($boxShadow1);
+    margin-top: 30px;
+    @include borderRadius(5px);
+}
+
+.showSlideRoomDetail {
+    width: 365px;
+
+    .btnSlideType1 {
+        width: 20px;
+        height: 20px;
+        border-top: 3px solid $color1;
+        border-left: 3px solid $color1;
+
+        &.left {
+            left: 30px;
+            right: auto;
+        }
+    
+        &.right {
+            right: 30px;
+        }
+
+        &:hover {
+            border-top: 3px solid $color2;
+            border-left: 3px solid $color2;
+        }
+    }
+}
+
+.titleRoomItem {
+    font-size: 28px;
+    line-height: 38px;
+    @include splitText(1, 38px);
+    @include transition(0.5s);
+    font-weight: 500;
+}
+
+.linkTitleRoomItem {
+    display: block;
+    padding-bottom: 15px;
+
+    &:hover {
+        text-decoration: none;
+
+        .titleRoomItem {
+            color: $color2;
+        }
+    }
+}
+
+.textRoomDetail {
+    font-size: 16px;
+    line-height: 26px;
+    color: $color7;
+    margin: 15px 0 0 0;
+    @include splitText(3, 78px);
+}
+
+.mediaBodyRoomItem {
+    padding: 0 30px;    
+    border-right: 1px solid $color17;
+}
+
+.showTextItemRoomDetail {
+    font-size: 16px;
+    line-height: 26px;
+    color: $color2;
+    
+    ul {
+        padding: 0 0 0 18px;
+        margin: 0;
+    }
+
+    li {
+        margin-top: 10px;
+    }
+}
+
+.wrapPriceRoomItem {
+    font-size: 18px;
+    line-height: 28px;
+    font-family: $nameFont2;
+    color: $color7;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.valPriceRoomItem {
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.mediaRightRoomItem {
+    padding-left: 30px;
+}
+
+.btnBookRoomDetail {
+    margin-bottom: 30px;
+}
+
+.btnBookRoomDetail,
+.btnViewRoomDetail {
+    display: block;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .textRoomDetail {
+        display: none;
+    }
+
+    .showTextItemRoomDetail{
+        margin-top: 10px;
+    }
+
+    .mediaBodyRoomItem {
+        padding: 0 15px;
+    }
+
+    .itemRoomList {
+        padding: 15px;
+
+        .btnSlideType4  {
+            &.right {
+                right: 15px;
+            }
+
+            &.left {
+                left: 15px;
+            }
+        }
+    }
+
+    .mediaRightRoomItem {
+        padding-left: 15px;
+    }
+
+    .wrapPriceRoomItem,
+    .btnBookRoomDetail {
+        margin-bottom: 15px;
+    }
+
+    .showSlideRoomDetail {
+        width: 200px;
+    }
+
+    .titleRoomItem {
+        font-size: 24px;
+        line-height: 34px;
+        @include splitText(1, 34px);
+    }
+
+    .valPriceRoomItem {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .wrapPageRoomList {
+        padding: 0 0 30px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .mediaRoom {
+        display: block;
+    }
+
+    .showSlideRoomDetail {
+        width: 100%;
+    }
+
+    .mediaRightRoomItem,
+    .mediaBodyRoomItem {
+        padding: 0;
+        border: none;
+        margin-top: 15px;
+    }
+
+    .btnBookRoomDetail,
+    .btnViewRoomDetail {
+        width: auto;
+        display: inline-block;
+        margin: 0;
+    }
+
+    .itemRoomList {
+        margin-top: 15px;
+    }
+
+    .wrapPageRoomList {
+        padding: 15px 0 30px 0;
+    }
+}

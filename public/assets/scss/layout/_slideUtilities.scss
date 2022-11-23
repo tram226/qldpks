@@ -1,0 +1,79 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.wrapUtilities{
+    padding: 60px 0;
+    background-color: $color1;
+}
+
+.contentImgItemUtilities {
+    position: relative;
+}
+
+.titleItemutilities {
+    padding-bottom: 15px;
+    @include transition(0.5s);
+}
+
+.linkImgItemUtilitie {
+    display: block;
+}
+
+.imgItemUtilitie {
+    width: 100%;
+    height: auto;
+}
+
+.showTextItemUtilities {
+    font-size: 16px;
+    line-height: 26px;
+    color: $color7;
+    
+    ul {
+        padding: 0 0 0 18px;
+        margin: 0;
+    }
+
+    li {
+        margin-top: 30px;
+        color: $color2;
+    }
+}
+
+.linkTitleItemUtilities {
+    &:hover {
+        text-decoration: none;
+
+        .titleItemutilities {
+            color: $color2;
+        }
+    }
+}
+
+.wrapUtilities {
+    .btnSlideType2 {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapUtilities {
+        padding: 30px 0 85px 0;
+
+        .btnSlideType2 {
+            &.left {
+                left: 0;
+                right: auto;
+            }
+
+            &.right {
+                right: auto;
+                left: 55px;
+            }
+        }
+    }
+
+    .colTextItemUtilities {
+        margin-top: 15px;
+    }
+}

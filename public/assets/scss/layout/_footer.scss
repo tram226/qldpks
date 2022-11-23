@@ -1,0 +1,237 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.wrapFooter {
+    background-color: $color4;
+}
+
+// logo footer
+.imgLogoFooter {
+    height: 65px;
+    width: auto;
+}
+
+.wrapTextAboutFooetr {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color7;
+    padding-left: 15px;
+}
+
+.contentItemFooter {
+    padding: 30px 0;
+}
+
+@media (max-width: 767px) {
+    .imgLogoFooter {
+        height: 80px;
+        width: auto;
+    }
+
+    .contentItemFooter {
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .mediaAboutFooter {
+        display: block;
+    }
+
+    .wrapTextAboutFooetr {
+        padding: 0;
+        margin-top: 15px;
+    }
+}
+// end logo footer
+
+// menu footer
+.wrapContactAndLinkFooter {
+    margin-top: 30px;
+}
+
+.contentContactFooter {
+    margin: 15px 0 0 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color7;
+
+    a {        
+        color: $color7;
+        @include transition(0.5s);
+
+        &:hover {
+            text-decoration: none;
+            color: $color2;
+        }
+    }
+
+    i {
+        width: 20px;
+        text-align: center;
+        color: $color2;
+        position: absolute;
+        left: 0;
+        top: 3px;
+        font-size: 20px;
+    }
+}
+
+.colItemLinkMenuFooter {
+    margin-top: 5px;
+}
+
+.contentContactFooter {
+    margin-top: 10px;
+}
+
+.itemContactFooter {
+    margin-top: 5px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.listMenuFooter{
+    padding: 0;
+    margin: 15px 0 0 0;
+    list-style: none;
+}
+
+.itemMenuFooter {
+    margin-top: 5px;
+}
+
+.linkTitleItemMenuFooter {
+    font-size: 14px;
+    color: $color3;
+    line-height: 24px;
+    @include transition(0.5s);
+
+    &:hover {
+        text-decoration: none;
+        color: $color1;
+    }
+}
+
+@media (max-width: 767px) {
+    .listMenuFooter {
+        margin-top: 5px;
+    }
+}
+// end menu footer
+
+// contact footer
+.listContactFooter {
+    b {
+        color: $color5;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+    i {
+        width: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .colContactFooter {
+        margin-bottom: 30px;
+    }
+
+    .contentContactFooter {
+        margin-top: 0;
+    }
+}
+// end contact footer
+
+// map
+.titleMapFooter {
+    font-size: 36px;
+    line-height: 46px;
+    color: $color7;
+    font-family: $nameFont2;
+}
+
+.descriptionmapFooter {
+    font-size: 14px;
+    line-height: 24px;
+    color: $color7;
+    margin: 10px 0;
+}
+
+.titleMenuFooter {
+    font-size: 24px;
+    color: $color7;
+    font-family: $nameFont2;
+    line-height: 34px;
+}
+
+.btnWatchMap {
+    margin-bottom: 15px;
+}
+
+.linkMenuFooter {
+    font-size: 14px;
+    line-height: 24px;
+    color: $color7;
+    position: relative;
+    z-index: 1;
+    @include transition(0.5s);
+    @include splitText(1, 24px);
+
+    &:hover {
+        color: $color2;
+        text-decoration: none;
+    }
+}
+
+.contentItemMapFooter {
+    padding: 30px;
+    background-color: $color1;
+    border-top: 3px solid $color2;
+}
+
+.itemMenuFooetr {
+    border-top: 1px solid $color14;
+    position: relative;
+    padding: 5px 60px 5px 0;
+}
+
+.wrapFromMapFooter {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    z-index: 0;
+    color: $color5;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.wrapMenuFooetr {
+    padding: 0;
+    list-style: none;
+    margin: 10px 0 0 0;
+
+    .itemMenuFooetr {
+        &:first-child {
+            border-top: none;
+        }
+    
+    }
+}
+
+@media (max-width: 991px) {
+    .contentItemMapFooter {
+        margin-top: 15px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapFooter {
+        padding-bottom: 40px;
+    }
+}
+// end map

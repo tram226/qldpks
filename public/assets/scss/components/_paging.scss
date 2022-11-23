@@ -1,0 +1,26 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.wrapPaggingList {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.linkPaggingList {
+    padding: 2px 10px;
+    font-size: 16px;
+    color: $color1;
+    line-height: 26px;
+    background-color: $color2;
+    @include borderRadius(5px);
+    display: inline-block;
+    @include transition(0.5s);
+    border: 2px solid $color2;
+
+    &.active,
+    &:hover {
+        background-color: $color1;
+        text-decoration: none;
+        color: $color2;
+    }
+}

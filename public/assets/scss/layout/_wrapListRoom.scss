@@ -1,0 +1,137 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.wrapListProject {
+    padding: 60px 0;
+    background-color: $color4;
+}
+
+.imgItemProject {
+    @include opacity(0.8);
+    @include transition(0.5s);
+}
+
+.listProject {
+    margin-top: 15px;
+}
+
+.colItemProject {
+    margin-top: 15px;
+}
+
+.wrapImgResizeItemProject {  
+    background-color: $color9;
+    display: block;
+}
+
+.wrapTextItemProject {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 15px;
+    @include bgGradient($gradient1);
+}
+
+.titleHeaddingItemProject {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: $nameFont2;
+    font-weight: 700;
+    color: $color1;
+    @include splitText(2, 48px);
+    margin: 0;
+    @include transition(0.5s);
+}
+
+.desciptionItemProject {
+    font-size: 14px;
+    line-height: 20px;
+    color: $color1;    
+    @include splitText(3, 72px);
+    margin: 0 0 10px 0;
+    padding: 0 15px;
+}
+
+.textInfRoomItem {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.wrapInfoRoomItem {
+    color: $color1;
+    font-weight: 700;
+    font-size: 12px;
+    margin: 10px 0;
+
+    .textInfRoomItem {
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.linkTitleItemProject {
+    display: block;
+
+    &:hover {
+        text-decoration: none;
+
+        .titleHeaddingItemProject {
+            color: $color2;
+        }
+    }
+}
+
+.btnWatchMoreProject {
+    margin: 0 15px;
+}
+
+.wrapTextItemProject,
+.wrapImgResizeItemProject,
+.imgItemProject {
+    @include transition(0.5s);
+}
+
+.contentItemProject {
+    position: relative;
+
+    &:hover {
+        .imgItemProject {
+            @include opacity(0.4);
+        }
+    }
+}
+
+.priceRoomItem {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: $nameFont2;
+    color: $color1;
+    line-height: 24px;
+}
+
+.textPriceRoomItem {
+    font-size: 24px;
+    line-height: 34px;
+}
+
+@media (max-width: 991px) {
+    .wrapListProject {
+        padding: 30px 0;
+    }
+
+    .titleHeaddingItemProject {
+        font-size: 24px;
+        line-height: 30px;
+        @include splitText(2, 40px);
+    }
+
+    .colItemProject {
+        padding: 0 7.5px;
+    }
+
+    .rowListProject {
+        margin: 0 -7.5px;
+    }
+}

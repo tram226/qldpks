@@ -1,0 +1,95 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.wrapCopyRightAndDesigned {
+    margin-top: 60px;
+}
+
+.wrapTextCopyRightAndDesigned {
+    font-size: 14px;
+    line-height: 24px;
+    color: $color7;
+    float: left;
+
+    a {
+        color: $color2;
+        @include transition(0.5s);
+        font-weight: 700;
+
+        &:hover {
+            color: $color3;
+            text-decoration: none;
+        }
+    }
+}
+
+.linkFanpageFooter {
+    font-size: 14px;
+    margin-left: 0px;
+    color: $color1;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    @include borderRadius(100%);
+    background-color: $color2;
+    display: inline-block;
+    text-align: center;
+}
+
+.listFanpageFooter {
+    float: right;
+
+    .linkFanpageFooter {
+        @include transition(0.5s);
+
+        &:hover {
+            text-decoration: none;
+            background-color: $color3;
+            color: $color1;
+        }
+    }
+}
+
+.textCopyRightFooter {
+    display: inline-block;
+    position: relative;
+    padding-right: 15px;
+
+    &:after {
+        position: absolute;
+        top: 50%;
+        right: 6px;
+        content: '';
+        @include translate(0, -50%);
+        width: 1px;
+        height: 10px;
+        background-color: $color7;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapTextCopyRightAndDesigned,
+    .listFanpageFooter {
+        float: none;
+    }
+    .textCopyRightFooter,
+    .texDesignedFooter {
+        display: block;
+    }
+
+    .texDesignedFooter {
+        margin: 5px 0;
+    }
+
+    .textCopyRightFooter {
+        padding-right: 0;
+    
+        &:after {
+            content: none;
+        }
+    }
+
+    .wrapCopyRightAndDesigned {
+        margin-top: 20px;
+    }
+}

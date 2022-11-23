@@ -1,0 +1,122 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.wrapListComment {
+    padding: 60px 0;
+    background-color: $color1;
+}
+
+.wrapBannerAndCmmt {
+    position: relative;
+}
+
+.wrapSlideTestiomonials{
+    @include boxShadow($boxShadow1);
+    margin-top: 30px;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    background-color: $color15;
+    
+    &:before {
+        font-size: 58px;
+        position: absolute;
+        top: 10px;
+        left: 40px;
+        color: $color12;
+        content: "\f10d";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        z-index: 0;
+    }
+}
+
+.wrapImgUserCmt {
+    width: 100px;
+    height: 100px;
+}
+
+.wrapIconTestimonial {
+    font-size: 12px;
+    color: $color2;
+}
+
+.textTestimonial {
+    font-size: 18px;
+    line-height: 30px;
+    color: $color5;
+    margin:0 0 30px 0;
+    @include splitText(4, 120px);
+    font-family: $nameFont2;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.titleNameTestimonial {
+    font-size: 14px;
+    color: $color7;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.descriptionTestimonial {
+    font-size: 14px;
+    line-height: 24px;
+    color: $color7;
+    margin: 0 0 15px 0;
+}
+
+.wrapImgItemTestimonial {
+    width: 80px;
+}
+
+.mediaBodyItemTestimonial {
+    padding-left: 30px;
+}
+
+.contentListComment {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60%;
+}
+
+.wrapBannerCmt {
+    width: 50%;
+    z-index: 0;
+    position: relative;
+    float: right;
+}
+
+@media (max-width: 991px) {
+    .wrapListComment {
+        padding: 30px 0;
+    }
+
+    .wrapSlideTestiomonials {
+        margin-top: 30px;
+        padding: 15px
+    }
+
+    .textTestimonial {
+        margin: 5px 0;
+    }
+
+    .wrapBannerCmt {
+        float: none;
+        @include widthCalc('100% - 60px');
+        margin-top: -150px;
+        margin-left: 60px;
+    }
+
+    .contentListComment {
+        width: auto;
+        position: static;
+    }
+
+    .mediaBodyItemTestimonial {
+        padding-left: 5px;
+    }
+}

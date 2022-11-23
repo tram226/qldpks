@@ -1,0 +1,158 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.wrapImgSlideMain {
+    @include heightCalc('100vh - 164px');
+}
+
+.wrapTextSlideMain {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    @include translate(0, -50%);
+    z-index: 500;
+}
+
+.wrapDescriptionPostSlideMain,
+.titlePostSlideMain {
+    font-size: 70px;
+    line-height: 88px;
+    color: $color1;
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 10px;
+    font-family: $nameFont3;
+    text-align: center;
+    text-shadow: -2px 0px 0px $color2, 2px 0px 0px $color2, 0px -2px 0px $color2, 0px 2px 0px $color2;
+    -webkit-text-shadow: -2px 0px 0px $color2, 2px 0px 0px $color2, 0px -2px 0px $color2, 0px 2px 0px $color2;
+    -moz-text-shadow: -2px 0px 0px $color2, 2px 0px 0px $color2, 0px -2px 0px $color2, 0px 2px 0px $color2;
+    -ms-text-shadow: -2px 0px 0px $color2, 2px 0px 0px $color2, 0px -2px 0px $color2, 0px 2px 0px $color2;
+    -o-text-shadow: -2px 0px 0px $color2, 2px 0px 0px $color2, 0px -2px 0px $color2, 0px 2px 0px $color2;
+}
+
+.contentTextSlideMain {
+    padding: 0 80px;
+}
+
+.btnSlideSlickPrevHome {
+    position: absolute;
+    top: 50%;
+    @include translate(0, -50%);
+    color: $color1;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 48px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    @include borderRadius(100%);
+    border: 1px solid $color1;
+    z-index: 100;
+    @include transition(0.5s);
+    @include opacity(0);
+
+    &.prev {
+        left: 15px;
+    }
+
+    &.next {
+        right: 15px;
+    }
+
+    &:hover {
+        background-color: $color2;
+        color: $color1;
+        border-color: $color2;
+    }
+}
+
+.showSlideMain  {
+    &:hover {
+        .btnSlideSlickPrevHome {
+            @include opacity(1);
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .titlePostSlideMain {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .btnSlideSlickPrevHome {
+        @include opacity(1);
+    }
+
+    .wrapImgSlideMain {
+        @include heightCalc('100vh - 60px');
+    }    
+
+    .wrapDescriptionPostSlideMain,
+    .titlePostSlideMain {
+        font-size: 28px;
+        line-height: 44px;
+    }
+}
+
+@media (max-width: 666px) {
+    .wrapDescriptionPostSlideMain,
+    .titlePostSlideMain {
+        font-size: 18px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btnSlideSlickPrevHome {
+        width: 30px;
+        height: 30px;
+        line-height: 28px;
+
+        &.prev {
+            left: 5px;
+        }
+    
+        &.next {
+            right: 5px;
+        }
+    }
+
+    .contentTextSlideMain {
+        padding: 0 25px;
+    }
+
+    .wrapSlideMain,
+    .wrapImgSlideMain,
+    .slick-track,
+    .slick-list,
+    .showSlideMain,
+    .contentSlideMain {
+        height: auto;
+    }
+
+    .contentSlideMain {
+        position: static;
+    }
+
+    .wrapImgSlideMain {
+        height: auto;
+        padding-top: 100%;
+    }
+
+    .wrapDescriptionPostSlideMain,
+    .titlePostSlideMain {
+        letter-spacing: 5px;
+    }
+}
+
+@media (max-width: 359px) {
+    .wrapDescriptionPostSlideMain,
+    .titlePostSlideMain {
+        font-size: 16px;
+        line-height: 30px;
+    }
+}

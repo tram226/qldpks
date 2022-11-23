@@ -1,0 +1,126 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.wrapPageContact {
+    padding: 60px 0;
+    background-color: $color1;
+}
+
+.titleItemContact {
+    font-size: 28px;
+    line-height: 38px;
+    padding-bottom: 20px;
+}
+
+.wrapTextItemContact {
+    font-size: 16px;
+    line-height: 26px;
+    color: $color7;
+    margin-top: 15px;
+    padding-left: 5px;
+
+    a {
+        color: $color2;
+        @include transition(0.5s);
+
+        &:hover {
+            color: $color7;
+            text-decoration: none;
+        }
+    }
+
+    p {
+        margin-bottom: 5px;
+    }
+}
+
+.wrapIconItemContact {
+    font-size: 20px;
+    color: $color2;
+    margin-top: 14px;
+}
+
+.textSendMessage {
+    font-size: 16px;
+    line-height: 26px;
+    color: $color7;
+    margin: 15px 0;
+}
+
+.wrapFrmAndMap {
+    margin-top: 30px
+}
+
+.titleInputSendMessage {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color7;
+    margin-bottom: 0;
+}
+
+#map {
+    height: 742px;
+}
+
+.rowFrmAndMapContact {
+    margin: 0;
+}
+
+.colFrmContact,
+.colMapContact {
+    padding: 0;
+}
+
+.contentFrmContact {
+    padding: 60px 0 60px 60px;
+}
+
+.frmSendMessage {
+    position: relative;
+
+    &:after {
+        background-color: $color1;
+        height: 100%;
+        width: 60px;
+        top: 0;
+        right: -60px;
+        content: '';
+        z-index: 1;
+        position: absolute;
+    }
+}
+
+.colMapContact {
+    position: relative;
+    z-index: 0;
+}
+
+@media (max-width: 666px) {
+    .wrapPageContact {
+        padding: 15px 0 30px 0;
+    }
+
+    .wrapFrmAndMap,
+    .colInfoHotel {
+        margin-top: 10px;
+    }
+
+    .contentFrmContact {
+        padding: 0;
+    }
+
+    .frmSendMessage {
+        &:after {
+            content: none;
+        }
+    }
+
+    .colMapContact {
+        margin-top: 15px;
+    }
+
+    #map {
+        height: 400px;
+    }
+}

@@ -1,0 +1,668 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.wrapHeader {
+    height: 164px;
+}
+
+// header bottom
+.wrapLogoHeaderBottom {
+    float: left;
+    margin: 0;
+}
+
+.btnBookNowHeaderBottom {
+    width: 44px;
+    padding: 0;
+    text-align: center;
+    @include borderRadius(30px);
+    border: 1px solid $color2;
+    background-color: transparent;
+    margin-left: 15px;
+    line-height: 40px;
+}
+
+.wrapMenuMainHeaderBottom {
+    float: right;
+}
+
+.imgLogoHeaderBottom,
+.linkLogoHeaderBottom {
+    display: block;
+}
+
+.linkLogoHeaderBottom {
+    padding: 15px 0;
+}
+
+.imgLogoHeaderBottom {
+    height: 90px;
+    width: auto;
+    @include transition(0.5s);
+}
+
+.listLinkMenuSubHeaderBottom,
+.listLinkMenuMainHeaderBottom {
+    color: $color6;
+    line-height: 120px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: $nameFont2;
+    padding: 0;
+    @include transition(0.5s);
+    display: block;
+    font-weight: 500;
+}
+
+.listLinkMenuSubHeaderBottom {
+    color: $color5;
+    line-height: 20px;
+    padding: 15px 0;
+    font-family: $nameFont1;
+    font-size: 14px;
+    font-weight: 400;
+
+    &:hover {
+        color: $color2;
+        text-decoration: none;
+    }
+}
+
+.listItemMenuSubHeaderBottom {
+    border-top: 1px solid #ddd;
+}
+
+.listMenuMainHeaderBottom,
+.listMenuSubHeaderBottom {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapListMenuSubHeaderBottom {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 990;
+    visibility: hidden;
+    @include opacity(0);
+    @include transition(0.5s);
+    @include translate(0, 15px);
+}
+
+.listMenuSubHeaderBottom {    
+    background-color: $color1;
+    @include borderRadius(0 0 5px 5px);
+    @include boxShadow($boxShadow1);
+    padding: 0 15px;
+    white-space: nowrap;
+
+    .listItemMenuSubHeaderBottom {
+        &:first-child {
+            border-top: none;
+        }
+    }
+}
+
+.contentHeaderBottom {
+    position: relative;
+}
+
+.btnDropdowMenuSubHeaderBottom {
+    color: $color6;
+    font-size: 12px;
+    @include transition(0.5s);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    @include translate(0, -50%);
+}
+
+.listItemMenuMainHeaderBottom {
+    float: left;
+    position: relative;
+    margin-left: 30px;
+
+    &.menuLanguageHeaderBottom {
+        margin-right: 0;
+    }
+
+    &.active,
+    &:hover {
+        .btnDropdowMenuSubHeaderBottom,
+        .listLinkMenuMainHeaderBottom {
+           color: $color2;
+           text-decoration: none;
+       }
+    }
+}
+
+.listMenuMainHeaderBottom {
+    .listItemMenuMainHeaderBottom {
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.menuSubHeaderBottom {
+    .listLinkMenuMainHeaderBottom {
+        padding-right: 15px;
+    }
+
+    &:hover {
+        .wrapListMenuSubHeaderBottom {
+            visibility: visible;
+            @include opacity(1);            
+            @include translate(0, 0);
+        }
+    }
+}
+
+.imgLanguageHeaderBottom {
+    @include translate(0, -2px);
+}
+
+.listMenuInfoHoteHeaderlMobile,
+.wrapCloseMenuHeaderMobile,
+.btnShowMenuHeaderMobile {
+    display: none;
+}
+
+@media (max-width: 1199px) {
+    .listItemMenuMainHeaderBottom {
+        margin-left: 15px;
+    }
+
+    .listLinkMenuSubHeaderBottom,
+    .listLinkMenuMainHeaderBottom {
+        font-size: 14px;
+    }
+
+    .listLinkMenuSubHeaderBottom {
+        line-height: 20px;
+    }
+
+    .imgLogoHeaderBottom {
+        height: 70px;
+    }
+}
+
+@media (max-width: 991px) {
+    .linkLogoHeaderBottom {
+        padding: 5px 0;
+    }
+
+    .wrapHeader {
+        height: 60px;
+    }
+
+    .listMenuMainHeaderBottom {
+        margin-left: 0;
+    }
+
+    .wrapMenuMainHeaderBottom {
+        position: fixed;
+        z-index: 992;
+        background-color: $color4;
+        width: 300px;
+        left: -100%;
+        top: 60px;
+        overflow-y: auto;
+        @include calc('height', '100% - 60px');
+        @include transition(0.5s);    
+        display: block;    
+    }
+
+    .wrapCloseMenuHeaderMobile {
+        display: block;
+        position: fixed;
+        z-index: 991;
+        background-color: $color8;
+        right: -100%;
+        top: 60px;
+        @include calc('height', '100% - 60px');
+        @include transition(0.5s);
+        @include calc('width', '100% - 300px');  
+    }
+
+    .listItemMenuMainHeaderBottom {
+        width: 100%;
+        margin: 0;
+        float: none;
+        border-bottom: 1px solid $color17;
+    }
+
+    .listLinkMenuMainHeaderBottom {
+        line-height: 20px;
+        padding: 15px;
+        color: $color3;
+
+        &:after {
+            content: none;
+        }
+    }
+
+    .btnDropdowMenuSubHeaderBottom {
+        top: 0;
+        @include translate(0,0);
+        width: 40px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: $color3;
+    }
+
+    .menuSubHeaderBottom {
+        .listLinkMenuMainHeaderBottom {
+            padding-right: 0;
+            @include calc('width', '100% - 40px');
+        }
+    }
+
+    .wrapLogoHeaderBottom {
+        position: static;
+        display: table;
+        margin-left: 35px;
+    }
+
+    .imgLogoHeaderBottom {
+        height: 50px;
+    }
+
+    .btnShowMenuHeaderMobile {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include translate(0, -50%);
+        font-size: 24px;
+        color: $color7;
+
+        .iconHidden {
+            display: none;
+        }
+
+        &:hover {
+            color: $color2;
+        }
+    }
+
+    .wrapHeader {
+        &.showMenu {
+            .wrapMenuMainHeaderBottom {
+                left: 0;
+            }
+
+            .wrapCloseMenuHeaderMobile {
+                right: 0;
+            }
+
+            .btnShowMenuHeaderMobile {
+                .iconHidden {
+                    display: block;
+                }
+
+                .iconShow {
+                    display: none;
+                }
+            }
+        }
+    
+        &.fixedMenu {    
+            .imgLogoHeaderBottom {
+                height: 50px;
+            }
+        }
+    }
+
+    .wrapListMenuSubHeaderBottom {
+        position: static;
+        visibility: visible;
+        @include opacity(1);
+        display: none;
+        @include translate(0, 0);
+        @include transition(unset);
+        @include transition(none);
+    }
+
+    .listMenuSubHeaderBottom {
+        @include boxShadow(unset);
+        @include boxShadow(none);
+        @include borderRadius(0);
+        background-color: $color1;
+        padding: 0;
+        white-space: normal;
+
+        .listLinkMenuSubHeaderBottom {
+            padding: 10px 15px;
+        }
+
+        .listItemMenuSubHeaderBottom {
+            border-top: none;
+        }
+    }
+
+    .listLinkMenuSubHeaderBottom {
+        padding: 15px 15px 15px 30px;
+    }
+
+    .listItemMenuLanguageMobile {
+        display: inline-block;
+    }
+
+    .listLinkMenuLanguageMobile {
+        display: block;
+        padding: 0 5px;
+    }
+
+    .listMenuInfoHoteHeaderlMobile {
+        display: block;
+
+        .listItemHeaderTop {
+            width: 100%;
+        }
+
+        .listLinkHeaderTop {
+            color: $color3;
+            display: block;
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .btnBookNowHeaderBottom {
+        width: 27px;
+        margin-left: 0px;
+        line-height: 25px;
+        font-size: 14px;
+    }
+}
+
+// header top
+.wrapHeaderTop {
+    background-color: $color4;
+    height: 44px;
+}
+
+.headerTopLeft {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+}
+
+.listMenuHeaderTop {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listLinkHeaderTop {
+    color: $color6;
+    font-size: 14px;
+    line-height: 20px;
+    @include transition(0.5s);
+
+    i {
+        color: $color2;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: $color2;
+    }
+}
+
+.menuSearchAndLanguage {
+    .listLinkHeaderTop {
+        i {
+            color: $color6;     
+            @include transition(0.5s);     
+        }
+        
+        &:hover {
+            i {
+                color: $color2;
+            }
+        }
+    }    
+
+    .listLinkMenuMainHeaderBottom {
+        line-height: 20px;
+        padding-right: 0;
+    }
+
+    .wrapListMenuSubHeaderBottom {
+        left: -15px;
+    }
+}
+
+.listItemHeaderTop {
+    float: left;
+    margin-right: 30px;
+    padding: 10px 0;
+}
+
+.headerTopRight {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+
+    .listItemHeaderTop {
+        margin-left: 30px;
+        margin-right: 0;
+    }
+}
+
+.menuLanguageHeaderBottom {
+    padding: 12px 15px 12px 0;
+    position: relative;
+
+    i {
+        color: $color6;
+        @include transition(0.5s);
+    }
+
+    &:hover {
+        i {
+            color: $color2;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .listLinkMenuMainHeaderBottom {
+        line-height: 100px;
+    }
+
+    .wrapHeader {
+        height: 144px
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapHeaderTop {
+        display: none;
+    }
+
+    .wrapHeader {
+        height: 60px
+    }
+
+    .menuLanguageHeaderBottom {
+        padding: 0;
+    }
+
+    .listLinkMenuMainHeaderBottom {
+        line-height: 20px;
+    }
+}
+// end header top
+
+// img booking
+.wrapImgBooking {
+    padding: 15px 0;
+    margin: 0 30px;
+    position: absolute;
+    top: 0;
+    left: 131px;
+}
+
+.imgBooking {
+    height: 90px;
+    width: auto;
+    display: block;
+    @include transition(0.5s);
+}
+
+@media (max-width: 991px) {
+    .wrapImgBooking {
+        padding: 15px;
+        margin: 0;
+        position: static;
+    }    
+
+    .headerTopLeft {
+        position: static;
+        padding: 0 15px;
+    }
+
+    .headerTopRight {
+        float: right;
+        position: static;
+
+        .listItemHeaderTop {
+            margin-left: 0;
+            padding: 0;
+        }
+
+        .listLinkHeaderTop {
+            line-height: 60px;
+        }
+    }
+
+    .menuSearchAndLanguage  {
+        .listLinkMenuMainHeaderBottom {
+            width: auto;
+            display: inline-block;
+        }
+
+        .btnDropdowMenuSubHeaderBottom {
+            width: auto;
+            height: auto;
+            display: inline-block;
+            position: static;
+            @include translate(0, 0);
+        }
+
+        .listLinkMenuMainHeaderBottom {
+            line-height: 60px;
+            padding: 0 0 0 15px;
+        }
+    }
+
+    .menuLanguageHeaderBottom {
+        .wrapListMenuSubHeaderBottom {
+            position: absolute;
+            left: 0;
+            @include boxShadow($boxShadow1);
+        }
+
+        .listLinkMenuSubHeaderBottom {
+            padding: 15px;
+        }
+
+        &:hover {
+            .wrapListMenuSubHeaderBottom {
+                display: none;
+            }
+        }
+    }
+}
+// end img booking
+
+// btn book room
+.wrapBtnBookRoomHeader {
+    float: right;
+    margin-left: 30px;
+    margin-top: 40px;
+    @include transition(0.5s);
+}
+
+@media (max-width: 1199px) {    
+    .wrapBtnBookRoomHeader {
+        margin-left: 15px;
+        margin-top: 30px
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapBtnBookRoomHeader {
+        margin-top: 10px
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapBtnBookRoomHeader {
+        display: none;
+    }
+}
+// end btn book room
+
+// fixed menu
+.wrapHeaderBottom {
+    @include transition(0.5s);
+}
+
+.fixedMenu {
+    .wrapHeaderBottom {
+        position: fixed;
+        z-index: 991;
+        background-color: $color16;
+        width: 100%;
+        left: 0;
+        top: 0;
+        @include boxShadow($boxShadow1);
+    }
+
+    .imgLogoHeaderBottom {
+        height:50px;
+    }
+
+    .imgBooking {
+        height: 50px;
+    }
+
+    .listLinkMenuMainHeaderBottom {
+        line-height: 80px;
+    }
+
+    .wrapBtnBookRoomHeader {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .fixedMenu {
+        .listLinkMenuMainHeaderBottom {
+            line-height: 20px;
+        }
+
+        .menuLanguageHeaderBottom {
+            .listLinkMenuMainHeaderBottom {
+                line-height: 60px;
+            }
+        }
+        
+        .imgBooking {
+            height: 90px;
+        }
+
+        .wrapBtnBookRoomHeader {
+            margin-top: 10px;
+        }
+    }
+}
+// end fixed menu

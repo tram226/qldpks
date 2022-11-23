@@ -1,0 +1,23 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.wrapPageServiceList {
+    background-color: $color1;
+    padding: 30px 0 60px 0;
+}
+
+.elementSlideLatestNews {
+    @include opacity(1);
+    @include transform(scale(1));
+    margin-top: 30px;
+}
+
+.wrapOverInfoItemLatestNews {
+    @include boxShadow($boxShadow1);
+}
+
+@media (max-width: 991px) {
+    .wrapPageServiceList {
+        padding: 0 0 30px 0;
+    }
+}

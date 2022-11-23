@@ -1,0 +1,36 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.contentPageAbout {
+    font-size: 16px;
+    line-height: 26px;
+    color: $color7;
+}
+
+.wrapPageAbout {
+    padding: 60px 0;
+}
+
+.wrapImgAbout {
+    float: left;
+    width: 50%;
+    padding: 0 30px 10px 0;
+}
+
+.imgAbout {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 991px) {
+    .wrapImgAbout {
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    .wrapPageAbout {
+        padding: 30px 0;
+    }
+}

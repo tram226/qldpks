@@ -1,0 +1,72 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+// title page
+.titlePageSpecial {
+    display: none;
+}
+// end title page
+
+// title category 1
+.wrapTitleType1Mini {
+    font-size: 16px;
+    line-height: 22px;
+    color: $color2;
+    margin: 0 0 10px 0;
+}
+
+.wrapTitleType2,
+.wrapTitleType1 {
+    color: $color7;
+    line-height: 60px;
+    font-size: 36px;
+    font-family: $nameFont2;
+    position: relative;
+    margin: 0;
+    padding-bottom: 30px;
+
+    &:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: '';
+        width: 100px;
+        border-bottom: 12px dotted $color2;
+    }
+}
+// end title category 1
+
+// title category 2
+.wrapTitleType2 {
+    line-height: 70px;
+    font-size: 46px;
+    display: table;
+    margin: auto;
+
+    &:after {
+        left: 50%;
+        @include translate(-50%, 0);
+    }
+}
+// end title category 2
+
+// title category 3
+.wrapTitleType3 {
+    line-height: 30px;
+    font-size: 24px;
+    margin: 0;
+    color: $color7;
+    padding-top: 30px;
+    position: relative;
+    font-family: $nameFont2;
+
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        width: 100px;
+        border-bottom: 5px solid $color2
+    }
+}
+// end title category 3

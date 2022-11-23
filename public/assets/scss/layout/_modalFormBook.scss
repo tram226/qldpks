@@ -1,0 +1,33 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.modalFormBookRoom {
+    .listInputBookRoom {
+        width: 100%;
+    }
+    
+    .titleMainFormBookRoom {
+        display: block;
+    }
+    
+    .rowInputBookRoom {
+        margin: 0 -7.5px;
+    }
+    
+    .colInputBookRoom {
+        padding: 0 7.5px;
+        margin-bottom: 15px;
+    }
+    
+    .colBtnBookRoom {
+        margin-bottom: 0;
+    }
+    
+    .modalBodyFormBookRoom {
+        position: relative;
+    }
+    
+    .btnCloseFormBookRoomMobile {
+        display: block;
+    }
+}

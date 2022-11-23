@@ -1,0 +1,233 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.wrapPageRoomDetail {
+    background-color: $color1;
+    padding: 60px 0;
+}
+
+.colSlideRoomDetail {
+    padding: 0;
+}
+
+.wrapSlideMainRoomDetail {
+    padding: 0 15px;
+    .btnSlideType1 {
+        border-top: 3px solid $color1;
+        border-left: 3px solid $color1;
+
+        &.left {
+            left: 20px;
+            right: auto;
+        }
+    
+        &.right {
+            right: 20px;
+        }
+
+        &:hover {            
+            border-top: 3px solid $color7;
+            border-left: 3px solid $color7;
+        }
+    }
+}
+
+.wrapSlideCtrRoomDetail {
+    margin: 5px 0 0 0;
+    padding: 0 10px;
+
+    .btnSlideType1 {
+        width: 15px;
+        height: 15px;
+        border-top: 3px solid $color1;
+        border-left: 3px solid $color1;
+        
+
+        &.left {
+            left: 20px;
+            right: auto;
+        }
+    
+        &.right {
+            right: 20px;
+        }
+
+        &:hover {            
+            border-top: 3px solid $color7;
+            border-left: 3px solid $color7;
+        }
+    }
+
+    &.stopRunSlide {
+        .slick-track {
+            @include transform(translate3d(0, 0, 0) !important);
+        }
+    }
+}
+
+.itemSlideCtrRooMDetail {
+    padding: 0 2.5px;
+    cursor: pointer;
+}
+
+.wrapImgResizeSlideCtrRooMDetail {
+    @include transition(0.5s);
+    border: 2px solid transparent;
+}
+
+.slick-center {
+    .wrapImgResizeSlideCtrRooMDetail {
+        border: 2px solid $color7;
+    }
+}
+
+.titleMainRoomDetail {
+    padding-bottom: 20px;
+}
+
+.wrapPriceRoomDetail {
+    font-family: $nameFont2;
+    font-size: 18px;
+    line-height: 28px;
+    color: $color7;
+    margin: 15px 0;
+    font-weight: 500;
+    padding-right: 120px;
+}
+
+.valPriceRoomDetail {
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 700;
+    color: $color19;
+}
+
+.wrapDescriptionRoomDetail {
+    font-size: 16px;
+    line-height: 28px;
+    color: $color7;
+
+    p {
+        margin-bottom: 5px;
+    }
+}
+
+.wrapTitleAndPriceRoomDetail {
+    position: relative;
+}
+
+.btnBookRoomDetail {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+}
+
+.wrapRoomWouldLike,
+.wrapAmenitiesRoomDetail {
+    margin-top: 60px;
+}
+
+.listAmenitiesRoomDetail {
+    padding: 0;
+    list-style: none;
+}
+
+.titleMainRoomWouldLike,
+.titleMainAmenitiesRoomDetail {
+    font-size: 36px;
+    line-height: 46px;
+}
+
+.contentItemAmenitiesRoomDetail {
+    position: relative;
+    padding-left: 25px;
+}
+
+.colItemAmenitiesRoomDetail {
+    margin-top: 15px;
+}
+
+.wrapicTienIchPhong {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+        width: 20px;
+        height: auto;
+    }
+}
+
+.textTienIchPhong {
+    font-size: 16px;
+    line-height: 26px;
+    color: $color7;
+    margin: 0;
+}
+
+.listAmenitiesRoomDetail {
+    margin-top: 15px;
+}
+
+.itemSlideRoomWouldLike {
+    padding: 0 15px;
+}
+
+.wrapSlideRoomWouldLike {
+    margin: 30px -15px 0 -15px;
+
+    .btnSlideType1  {
+        border-top: 3px solid $color1;
+        border-left: 3px solid $color1;
+
+        &.left {
+            left: 40px;
+            right: auto;
+        }
+    
+        &.right {
+            right: 40px;
+        }
+
+        &:hover {
+            border-top: 3px solid $color2;
+            border-left: 3px solid $color2;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .wrapSlideCtrRoomDetail {
+        padding: 0 12px 0 10px;
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapPageRoomDetail {
+        padding: 30px 0;
+    }
+
+    .wrapRoomWouldLike,
+    .wrapAmenitiesRoomDetail {
+        margin-top: 30px;
+    }
+
+    .colTextRoomDetail {
+        margin-top: 15px;
+    }
+
+    .btnBookRoomDetail {
+        display: none;
+    }
+
+    .wrapPriceRoomDetail {
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .titleMainRoomDetail {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}

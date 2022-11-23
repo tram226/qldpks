@@ -1,0 +1,177 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+button:focus {
+    outline: unset;
+    outline: none;
+}
+
+.btnType4,
+.btnType3,
+.btnType2,
+.btnType1 {
+    @include borderRadius(3px);
+    line-height: 36px;
+    padding: 0 15px;
+    border: 2px solid $color2;
+    color: $color1;
+    font-size: 14px;
+    font-weight: 800;
+    display: inline-block;
+    background-color: #ff9900;
+    font-family: $nameFont2;
+    text-align: center;
+    @include transition(0.5s);
+
+    &:hover {
+        background-color: $color1;
+        text-decoration: none;
+        color: $color2;
+    }
+
+    &:focus {
+        outline: unset;
+        outline: none;
+    }
+}
+
+.btnType2 {
+    background-color: $color1;
+    color: $color2;
+
+    &:hover {
+        background-color: $color2;
+        text-decoration: none;
+        color: $color1;
+    }
+}
+
+.btnType3 {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.btnType4 {
+    background-color: $color1;
+    color: $color2;
+}
+
+// btn slide 1
+.btnSlideType1 {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    z-index: 800;
+    @include transition(0.5s);
+    border-top: 2px solid $color2;
+    border-left: 2px solid $color2;
+
+    &.left {
+        left: 6px;
+        @include transform(translate(0, -50%) rotate(-45deg));
+    }
+
+    &.right {
+        right: 6px;
+        @include transform(translate(0, -50%) rotate(135deg));
+    }
+
+    &:hover {
+        border-top: 2px solid $color7;
+        border-left: 2px solid $color7;
+    }
+}
+
+// btn slide 2
+.btnSlideType2 {
+    position: absolute;
+    top: 100%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 2px solid $color2;
+    background-color: $color1;
+    z-index: 800;
+    @include transition(0.5s);
+    text-align: center;
+    font-size: 14px;
+    line-height: 38px;
+    color: $color2;
+
+    &.left {
+        right: 55px;
+    }
+
+    &.right {
+        right: 0;
+    }
+
+    &:hover {
+        background-color: $color2;
+        color: $color1;
+    }
+
+    &:focus {
+        outline: unset;
+        outline: none;
+    }
+}
+// end btn slide 2
+
+// btn slide 3
+.btnSlideType3 {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    z-index: 800;
+    @include transition(0.5s);
+    border-top: 1px solid $color2;
+    border-left: 1px solid $color2;
+
+    &.left {
+        right: 35px;
+        @include transform(translate(0, -50%) rotate(-45deg));
+    }
+
+    &.right {
+        right: 0;
+        @include transform(translate(0, -50%) rotate(135deg));
+    }
+
+    &:hover {
+        border-top: 1px solid $color7;
+        border-left: 1px solid $color7;
+    }
+}
+// end btn slide 3
+
+// btn slide 4
+.btnSlideType4 {
+    background-color: transparent;
+    border: none;
+    color: $color2;
+    top: 50%;
+    @include translate(0, -50%);
+    font-size: 24px;
+    padding: 0;
+    position: absolute;
+    z-index: 800;
+
+    &.left {
+        left: 30px;
+        right: auto;
+    }
+
+    &.right {
+        right: 30px;
+    }
+}
+// end btn slide 4

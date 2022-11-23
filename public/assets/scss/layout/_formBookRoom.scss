@@ -1,0 +1,238 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.wrapFormBookRoom {
+    padding: 15px 0;
+    background-color: $color4;
+}
+
+.listInputBookRoom {   
+    width: 90%; 
+
+    .form-control[readonly],
+    .form-control {
+        background-color: transparent;
+        padding: 0 35px 0 15px;
+        font-size: 14px;
+        line-height: 38px;        
+        height: 38px;
+        border: none;
+        position: relative;
+        z-index: 1;
+        @include appearanceInput(none);
+    }
+}
+
+.contentInputBookRoom {
+    background-color: $color1;
+    border: 1px solid $color14;
+    @include borderRadius(3px);
+    position: relative;
+
+    .dropdown-toggle {
+        padding: 0 35px 0 15px;
+        font-size: 14px;
+        color: $color20;
+        line-height: 38px;
+        background-color: transparent;
+        border: none;
+
+        &:after {
+            content: none;
+        }
+    }
+
+    .bootstrap-select {
+        position: static;
+        padding: 0;
+
+        .dropdown-toggle {
+            &:focus {
+                background-color: transparent !important;
+                border: none !important;
+                outline: unset !important;
+                outline: none !important;
+                @include boxShadow(unset !important);
+                @include boxShadow(none !important);
+            }
+        }
+    }
+
+    .show > .btn-light.dropdown-toggle {
+        background-color: transparent !important;
+        border: none !important;
+        outline: unset !important;
+        outline: none !important;
+        @include boxShadow(unset !important);
+        @include boxShadow(none !important);
+    }
+
+    .dropdown-item {
+        font-size: 14px;
+        line-height: 24px;
+        @include transition(0.5s);
+        color: $color6;
+
+        &:hover,
+        &.active {
+            color: $color1;
+            background-color: $color2;
+        }
+    }
+
+    .dropdown-menu {
+        max-height: 300px !important;
+    }
+}
+
+.colBtnBookRoom {   
+    .contentInputBookRoom {
+        background-color: transparent;
+        border: none;
+        @include borderRadius(0);
+    }
+}
+
+.rowInputBookRoom {
+    margin: 0 -2.5px;
+}
+
+.colInputBookRoom {
+    padding: 0 2.5px;
+}
+
+.wrapInputChooseNumber {
+    position: relative;
+
+    .form-control {
+        text-align: center;
+    }
+}
+
+.btnControlNumberInput {
+    position: absolute;
+    top: 0;
+    line-height: 35px;
+    font-size: 18px;
+    color: $color2;
+    @include transition(0.5s);
+
+    &.btnIncreaseNumberInput {
+        left: 15px;
+    }
+
+    &.btnDeIncreaseNumberInput {
+        right: 15px;
+    }
+
+    &:hover {
+        color: $color3;
+    }
+}
+
+.btnCloseFormBookRoomMobile {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 18px;
+    color: $color7;
+    border: 2px solid $color7;
+    @include borderRadius(100%);
+    @include transition(0.5s);
+
+    &:hover {
+        color: $color2;
+        border-color: $color2;
+    }
+}
+
+.wrapIconFrmCtrBookRoom {
+    color: $color14;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    @include translate(0, -50%);
+    z-index: 0;
+}
+
+.wrapTextBookRoom {
+    font-size: 12px;
+    line-height: 18px;
+    color: $color5;
+    margin-top: 5px;
+}
+
+.btnShowBookRoom,
+.titleMainFormBookRoom,
+.btnCancelBookRoom {
+    display: none;
+}
+
+.titleMainFormBookRoom {
+    font-size: 24px;
+    padding-bottom: 20px;
+    line-height: 30px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.modal-open {
+    padding: 0 !important;
+    overflow: auto;
+}
+
+@media (max-width: 991px) {
+    .listInputBookRoom {
+        width: 100%;
+    }
+
+    .wrapFormBookRoom {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .colBtnBookRoom {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .colInputBookRoom {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .colBtnBookRoom {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .titleMainFormBookRoom {
+        display: block;
+    }
+
+    .btnShowBookRoom {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 990;
+        @include borderRadius(0);
+        text-align: center;
+    }
+}
